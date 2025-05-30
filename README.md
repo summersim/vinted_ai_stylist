@@ -25,22 +25,12 @@ An AI-powered fashion search assistant that helps users find clothing items thro
 
 - **Language**: Python 3.8+
 - **AI/ML**:
-  - LangChain for LLM orchestration
+  - LangGraph for LLM orchestration
   - Groq for high-performance LLM inference
   - Llama3-8b and Gemma models for natural language understanding
 - **Web Scraping**:
   - BeautifulSoup4 for HTML parsing
   - Custom Vinted scraper implementation
-- **Data Processing**:
-  - Pandas for data manipulation
-  - NumPy for numerical operations
-- **Testing**:
-  - unittest for unit testing
-  - pytest for test automation
-- **Development Tools**:
-  - Poetry for dependency management
-  - Black for code formatting
-  - Flake8 for linting
 
 ## Project Structure
 
@@ -118,18 +108,3 @@ Run the test suite using Poetry:
 ```bash
 poetry run pytest
 ```
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-[Add your license information here]
-
-## Acknowledgments
-
-- LangChain team for the excellent framework
-- Groq for the high-performance LLM inference
-- Vinted for the marketplace integration
-- BeautifulSoup for web scraping capabilities 
