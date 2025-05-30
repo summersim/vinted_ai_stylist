@@ -1,0 +1,77 @@
+[tool.poetry]
+name = "vinted_ai_stylist"
+version = "0.1.0"
+description = "AI-powered fashion search assistant for Vinted marketplace"
+authors = ["summersim <xinyisim@gmail.com>"]
+readme = "README.md"
+packages = [{include = "vinted_ai_stylist", from = "src"}]
+license = "MIT"
+repository = "https://github.com/yourusername/vinted_ai_stylist"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.12,<4.0"
+langchain = ">=0.3.0,<0.4.0"
+langchain-community = ">=0.3.0,<0.4.0"
+langchain-openai = "^0.3.14"
+langchain-groq = "^0.3.2"
+langgraph = ">=0.2.20,<0.3"
+langgraph-prebuilt = "^0.1.1"
+beautifulsoup4 = "^4.13.3"
+extruct = "^0.18.0"
+w3lib = "^2.3.1"
+url-normalize = "^2.2.0"
+torch = "^2.2.0"
+torchvision = "^0.17.0"
+ftfy = "^6.1.1"
+regex = "^2024.2.21"
+tqdm = "^4.66.2"
+numpy = ">=1.26.0,<2.0.0"
+transformers = "^4.51.3"
+vinted-scraper = "^2.4.0"
+python-dotenv = "^1.1.0"
+requests = "^2.32.3"
+pillow = "^11.1.0"
+streamlit = "^1.44.1"
+google-cloud-vision = "^3.10.1"
+serpapi = "^0.1.5"
+openai = "^1.12.0"
+clip = { git = "https://github.com/openai/CLIP.git" }
+v = "^1.0.0"
+vinted-api-scraper = "^0.5.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0.0"
+black = "^23.0.0"
+flake8 = "^6.0.0"
+mypy = "^1.0.0"
+
+[tool.poetry.scripts]
+vinted-ai-stylist = "vinted_ai_stylist.__main__:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py312']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
